@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import { Playfair_Display, Source_Serif_4, Inter } from 'next/font/google'
 import './globals.css'
 import { siteContent } from '@/content/site'
 import { JsonLd } from '@/components/ui/JsonLd'
@@ -9,11 +9,19 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
   display: 'swap',
   weight: ['400', '600', '700'],
+  style: ['normal', 'italic'],
 })
 
-const dmSans = DM_Sans({
+const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
+  variable: '--font-source-serif',
+  display: 'swap',
+  weight: ['400', '600'],
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
   display: 'swap',
   weight: ['400', '500', '600'],
 })
@@ -60,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <JsonLd />
       </head>
-      <body className={`${playfair.variable} ${dmSans.variable} font-sans`}>{children}</body>
+      <body className={`${playfair.variable} ${sourceSerif.variable} ${inter.variable} font-serif`}>{children}</body>
     </html>
   )
 }

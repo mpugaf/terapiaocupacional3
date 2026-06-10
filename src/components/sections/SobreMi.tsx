@@ -7,7 +7,7 @@ export function SobreMi() {
   const { therapistName } = siteContent.metadata
 
   return (
-    <SectionWrapper id="sobre-mi" className="bg-white">
+    <SectionWrapper id="sobre-mi" className="bg-cream">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         {/* Imagen — reemplazar con <Image> de next/image cuando se tengan los assets */}
         <div>
@@ -15,27 +15,27 @@ export function SobreMi() {
             alt={imageAlt}
             height="h-[400px] lg:h-[520px]"
             label="Foto de la terapeuta"
-            className="shadow-lg"
+            className="shadow-warm"
           />
         </div>
 
         {/* Texto */}
         <div>
-          <h2 className="mb-6 text-3xl font-bold text-slate-900 sm:text-4xl">{heading}</h2>
+          <h2 className="mb-6 font-display text-3xl font-bold text-ink sm:text-4xl">{heading}</h2>
           <div className="space-y-4">
             {bio.map((paragraph, i) => (
-              <p key={i} className="leading-relaxed text-slate-600">
+              <p key={i} className="leading-relaxed text-ink-muted">
                 {paragraph}
               </p>
             ))}
           </div>
 
           <div className="mt-8">
-            <h3 className="mb-4 text-lg font-semibold text-slate-900">Formación</h3>
+            <h3 className="mb-4 font-display text-lg font-semibold text-ink">Formación</h3>
             <ul className="space-y-2" aria-label={`Credenciales de ${therapistName}`}>
               {credentials.map((cred) => (
-                <li key={cred} className="flex items-start gap-3 text-slate-700">
-                  <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden="true">
+                <li key={cred} className="flex items-start gap-3 text-ink-soft">
+                  <span className="mt-0.5 shrink-0 text-olive-500" aria-hidden="true">
                     ✓
                   </span>
                   <span>{cred}</span>

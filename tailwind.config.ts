@@ -9,44 +9,50 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: '#FAF7F4',
+        // ── Variante A "Consultorio cálido" ──────────────────────────────
+        cream:   '#FAF7F2',   // fondo principal — papel marfil
+        surface: '#F0EBE1',   // superficie de cards — lino
 
+        // Paleta primaria: tonos madera centrada en primary #7A5C44
         olive: {
-          50:  '#F4F7F3',
-          100: '#E3EBE2',
-          200: '#C5D8C4',
-          300: '#9DBE9B',
-          400: '#739D71',
-          500: '#5C7A5A',
-          600: '#486048',
-          700: '#3A4D3A',
-          800: '#2F3E2F',
-          900: '#263326',
+          50:  '#F7F4F1',
+          100: '#EDE6DF',
+          200: '#D9CFC4',   // separador de secciones
+          300: '#C4B09A',
+          400: '#A88870',
+          500: '#7A5C44',   // PRIMARY — madera oscura
+          600: '#6A4D38',   // hover primary
+          700: '#5A3F2C',
+          800: '#4A3022',
+          900: '#3A2218',
         },
 
+        // Paleta acento: terracota centrada en accent #C97D4E
         clay: {
-          50:  '#FDF8F3',
-          100: '#F9EDD8',
-          200: '#F2D7B1',
-          300: '#E8BC84',
-          400: '#DA9C59',
-          500: '#C4956A',
-          600: '#A87A52',
-          700: '#8C6142',
-          800: '#744F36',
-          900: '#61412D',
+          50:  '#FDF7F2',
+          100: '#F5E8DA',
+          200: '#EACFB8',
+          300: '#DDB090',
+          400: '#D09470',
+          500: '#C97D4E',   // ACCENT — terracota suave
+          600: '#B86C3E',
+          700: '#A05832',
+          800: '#884828',
+          900: '#703B20',
         },
 
+        // Texto cálido
         ink: {
-          DEFAULT: '#1A1A18',
-          soft:    '#4A4A47',
-          muted:   '#7A7A75',
+          DEFAULT: '#2C2420',   // casi negro cálido
+          soft:    '#5A4A40',   // un tono más suave
+          muted:   '#9C8878',   // texto secundario
         },
       },
 
       fontFamily: {
         display: ['var(--font-playfair)', 'Georgia', 'serif'],
-        sans:    ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        serif:   ['var(--font-source-serif)', 'Georgia', 'serif'],
+        sans:    ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
 
       fontSize: {
@@ -68,6 +74,14 @@ const config: Config = {
 
       spacing: {
         section: '7rem',
+      },
+
+      borderRadius: {
+        DEFAULT: '0.25rem',   // casi cuadrado — tratamiento editorial
+      },
+
+      boxShadow: {
+        warm: '0 2px 8px rgba(122,92,68,0.12)',   // sombra cálida sutil
       },
 
       transitionTimingFunction: {

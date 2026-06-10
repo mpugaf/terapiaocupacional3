@@ -22,8 +22,8 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 shadow-sm backdrop-blur-sm'
-          : 'bg-white/80 backdrop-blur-sm'
+          ? 'bg-cream/95 shadow-warm backdrop-blur-sm'
+          : 'bg-cream/80 backdrop-blur-sm'
       }`}
     >
       <nav
@@ -34,7 +34,7 @@ export function Navbar() {
         <a
           href="#inicio"
           onClick={closeMenu}
-          className="text-lg font-bold text-emerald-800 hover:text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2"
+          className="font-display text-lg font-bold text-olive-600 hover:text-olive-500 focus:outline-none focus:ring-2 focus:ring-olive-500 focus:ring-offset-2"
         >
           {metadata.businessName}
         </a>
@@ -45,7 +45,7 @@ export function Navbar() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="text-sm font-medium text-slate-600 transition hover:text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2"
+                className="font-sans text-sm font-medium text-ink-muted transition hover:text-olive-500 focus:outline-none focus:ring-2 focus:ring-olive-500 focus:ring-offset-2"
               >
                 {item.label}
               </a>
@@ -56,7 +56,7 @@ export function Navbar() {
         {/* CTA — desktop */}
         <a
           href="#contacto"
-          className="hidden rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-800 focus:outline-none focus:ring-4 focus:ring-emerald-300 md:inline-flex"
+          className="hidden rounded bg-olive-500 px-5 py-2.5 font-sans text-sm font-semibold text-cream transition hover:bg-clay-500 focus:outline-none focus:ring-4 focus:ring-olive-300 md:inline-flex"
         >
           Pedir turno
         </a>
@@ -68,7 +68,7 @@ export function Navbar() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu"
           aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
-          className="rounded-md p-2 text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-400 md:hidden"
+          className="rounded p-2 text-ink-muted hover:bg-surface focus:outline-none focus:ring-2 focus:ring-olive-500 md:hidden"
         >
           {isMenuOpen ? (
             <svg
@@ -100,7 +100,7 @@ export function Navbar() {
       {isMenuOpen && (
         <div
           id="mobile-menu"
-          className="border-t border-slate-100 bg-white md:hidden"
+          className="border-t border-olive-200 bg-cream md:hidden"
         >
           <ul className="space-y-1 px-4 py-3" role="list">
             {nav.map((item) => (
@@ -108,18 +108,18 @@ export function Navbar() {
                 <a
                   href={item.href}
                   onClick={closeMenu}
-                  className="block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                  className="block rounded px-3 py-2.5 font-sans text-base font-medium text-ink-soft hover:bg-surface hover:text-olive-500 focus:outline-none focus:ring-2 focus:ring-olive-500"
                 >
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="border-t border-slate-100 px-4 py-4">
+          <div className="border-t border-olive-200 px-4 py-4">
             <a
               href="#contacto"
               onClick={closeMenu}
-              className="block rounded-lg bg-emerald-700 px-4 py-3 text-center font-semibold text-white hover:bg-emerald-800 focus:outline-none focus:ring-4 focus:ring-emerald-300"
+              className="block rounded bg-olive-500 px-4 py-3 text-center font-sans font-semibold text-cream hover:bg-clay-500 focus:outline-none focus:ring-4 focus:ring-olive-300"
             >
               Pedir turno
             </a>

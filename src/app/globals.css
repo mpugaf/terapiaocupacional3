@@ -20,6 +20,11 @@
   img {
     @apply max-w-full;
   }
+
+  /* Separador de sección — línea fina cálida entre secciones */
+  section + section {
+    border-top: 1px solid #D9CFC4;
+  }
 }
 
 /* ==========================================================================

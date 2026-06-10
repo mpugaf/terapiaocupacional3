@@ -39,7 +39,7 @@ export function Servicios() {
           <h2 className="mb-3 font-display text-4xl font-bold text-ink sm:text-5xl">
             {heading}
           </h2>
-          <p className="max-w-xl font-sans text-lg text-ink-soft">{subheading}</p>
+          <p className="max-w-xl text-lg text-ink-soft">{subheading}</p>
         </div>
       </RevealOnScroll>
 
@@ -77,7 +77,7 @@ export function Servicios() {
                   <div
                     className={`
                       relative z-10 flex h-20 w-20 items-center justify-center
-                      rounded-2xl ${accent.bg}
+                      rounded ${accent.bg}
                       transition-transform duration-300 group-hover:scale-105
                     `}
                   >
@@ -95,7 +95,7 @@ export function Servicios() {
                   <h3 className="mb-3 font-display text-2xl font-semibold text-ink sm:text-3xl">
                     {item.title}
                   </h3>
-                  <p className="max-w-prose font-sans text-lg leading-relaxed text-ink-soft">
+                  <p className="max-w-prose text-lg leading-relaxed text-ink-soft">
                     {item.description}
                   </p>
                 </div>

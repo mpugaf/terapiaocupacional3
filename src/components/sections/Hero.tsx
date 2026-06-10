@@ -30,7 +30,7 @@ function HeadlineWithUnderline({ text }: { text: string }) {
         >
           <path
             d="M2,9 C40,3 80,11 120,6 C152,2 175,9 198,5"
-            stroke="#C4956A"
+            stroke="#C97D4E"
             strokeWidth="3.5"
             fill="none"
             strokeLinecap="round"
@@ -89,7 +89,7 @@ export function Hero() {
         </h1>
 
         {/* Subheadline — sans, generoso, legible */}
-        <p className="mb-12 max-w-prose font-sans text-lg leading-relaxed text-ink-soft">
+        <p className="mb-12 max-w-prose text-lg leading-relaxed text-ink-soft">
           {subheadline}
         </p>
 
@@ -97,7 +97,7 @@ export function Hero() {
         <div className="flex flex-wrap items-center gap-5">
           <a
             href={cta.primary.href}
-            className="inline-flex items-center rounded-lg bg-olive-500 px-8 py-4 font-sans text-base font-semibold text-cream transition-colors duration-200 ease-smooth hover:bg-olive-600 focus:outline-none focus:ring-4 focus:ring-olive-300"
+            className="inline-flex items-center rounded bg-olive-500 px-8 py-4 font-sans text-base font-semibold text-cream transition-colors duration-200 ease-smooth hover:bg-clay-500 focus:outline-none focus:ring-4 focus:ring-olive-300"
           >
             {cta.primary.label}
           </a>
@@ -105,7 +105,7 @@ export function Hero() {
           {cta.secondary && (
             <a
               href={cta.secondary.href}
-              className="inline-flex items-center gap-2 font-sans text-base font-medium text-ink-soft underline-offset-4 transition-colors duration-200 hover:text-ink focus:outline-none focus:ring-2 focus:ring-olive-400 focus:ring-offset-2"
+              className="inline-flex items-center gap-2 font-sans text-base font-medium text-ink-soft underline-offset-4 transition-colors duration-200 hover:text-ink focus:outline-none focus:ring-2 focus:ring-olive-500 focus:ring-offset-2"
             >
               {cta.secondary.label}
               <span aria-hidden="true" className="text-clay-500">→</span>
