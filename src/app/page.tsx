@@ -22,9 +22,15 @@ export default function Home() {
       </main>
       <Footer />
 
-      {/* WhatsApp: solo se renderiza cuando features.whatsapp = true */}
-      {features.whatsapp && siteContent.metadata.socialLinks.whatsapp && (
-        <WhatsAppButton phoneNumber={siteContent.metadata.socialLinks.whatsapp} />
+      {/* WhatsApp: activo cuando features.whatsapp = true. Número desde NEXT_PUBLIC_WHATSAPP_NUMBER */}
+      {features.whatsapp && (
+        <WhatsAppButton
+          phoneNumber={
+            process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ??
+            siteContent.metadata.socialLinks.whatsapp ??
+            ''
+          }
+        />
       )}
     </>
   )
