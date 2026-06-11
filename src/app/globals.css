@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   CSS custom properties — tokens de diseño del proyecto
+   Usados directamente en componentes vía var(--color-*) o Tailwind arbitrary
+   ========================================================================== */
+:root {
+  --color-primary:    #7A5C44;
+  --color-accent:     #C97D4E;
+  --color-text:       #2C2420;
+  --color-text-soft:  #5A4A40;
+  --color-text-muted: #9C8878;
+  --color-surface:    #F0EBE1;
+  --color-bg:         #FAF7F2;
+  --color-separator:  #D9CFC4;
+}
+
 @layer base {
   html {
     /* 17px base — legibilidad para usuarios mayores */

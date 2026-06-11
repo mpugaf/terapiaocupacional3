@@ -8,7 +8,7 @@
  */
 export const features = {
   /** Botón flotante de WhatsApp. Requiere: NEXT_PUBLIC_WHATSAPP_NUMBER */
-  whatsapp: false,
+  whatsapp: true,
 
   /** Formulario de contacto con validación. Requiere: NEXT_PUBLIC_FORMSPREE_ENDPOINT (u opción EmailJS) */
   contactForm: false,
